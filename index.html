@@ -9,7 +9,10 @@
     <meta property="og:description" content="Desenvolvimento de soluções onlines para negócios"/>
     <meta property="og:url" content="http://lipsam.com.br"/>
     <meta property="og:image" content="http://lipsam.com.br/img/og-image.png"/>
+    <script src="assets/js/modernizr.custom.45655.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/jquery.js"></script>
+    <script defer src="assets/js/plugin.js"></script>
     <title>Lipsam - Desenvolvimento de soluções onlines para negócios</title>
 </head>
 <body>
@@ -22,8 +25,8 @@
     </header>
     <main>
         <section class="produtos">
-            <div class="produtos-carousell">
-                <div class="mosaico">
+            <ul class="produtos-carousell rslides">
+                <li class="mosaico rslide">
                     <div class="mosaico1">
                         <img src="assets/img/cartoons/giant-device.svg" alt="cartoon de dispositivo gigante">
                     </div>
@@ -31,16 +34,14 @@
                         <img src="assets/img/cartoons/multi-device.svg" alt="cartoon multi-dispositivos">
                         <img src="assets/img/cartoons/multi-op.svg" alt="cartoon pessoa trabalhando">
                     </div>
-                </div>
-                <!-- 
-                <div class="mosaico3">
-                    <img src="assets/img/cartoons/giant-device.svg" alt="">
-                </div>
-                <div class="mosaico3">
+                </li>
+                <li class="mosaico3 rslides">
+                    <img src="assets/img/cartoons/devicesGroup.svg" alt="">
+                </li>
+                <li class="mosaico3 rslides">
                     <img src="assets/img/cartoons/multi-screen.svg" alt="">
-                </div>
-                -->
-            </div>
+                </li>
+            </ul>
             <div class="desc">
                 <h2>Nossos Produtos</h2>
                 <p>Uma agência que cria sites modernos e funcionais, de single/multi pages a e-commerces, landing pages e catálogos online. 
@@ -69,9 +70,14 @@
                 <h2>Sobre Nós</h2>
                 <p>Na LIPSAM, nos dedicamos a entregar soluções digitais de alta qualidade. Nosso compromisso é transformar ideias em projetos web que geram resultados reais, com seriedade e profissionalismo em cada etapa. Somos apaixonados pelo que fazemos e trabalhamos com foco na excelência para garantir a satisfação de nossos clientes.</p>
             </div>
-            <div class="sobre-carousell">
-                    <img src="assets/img/cartoons/team-op.svg" alt="cartoon referência equipe trabalhando">
-            </div>
+            <ul class="sobre-carousell rslides">
+                    <li>
+                        <img src="assets/img/cartoons/team-op.svg" alt="cartoon referência equipe trabalhando">
+                    </li>
+                    <li>
+                        <img src="assets/img/cartoons/team-talk.svg" alt="cartoon referência equipe trabalhando">
+                    </li>
+            </ul>
         </section>
         <section class="contato">
             <div class="contato-interno desc">
