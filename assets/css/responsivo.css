@@ -6,7 +6,7 @@
     --grafite:#444;
     --container-full: 960px;
     --container-tablet: 768px;
-    --container-mobile: 767px;
+    --container-mobile: 540px;
     --title-h1:3em;
     --title-h2:2.5em;
     --texto-p:1.25em;
@@ -15,9 +15,12 @@
     --animate-repeat: 1;
 }
 @media only screen and (max-width: 970px) {
+    /* telas dimesões */
+    .produtos, .sobre, .portifolio-interno,.contato-interno{
+        max-width: var(--container-tablet);
+    }
     /* Produtos resposivo */
     .produtos, .sobre{
-        max-width: var(--container-tablet);
         flex-direction: column;
         justify-content: none;
         align-items: center;
@@ -42,7 +45,7 @@
 
     /* Portifólio responsivo */
     .portifolio-interno{
-        min-width: var(--container-tablet);
+        max-width: var(--container-tablet);
         flex-direction: column;
         gap: 32px;
     }
@@ -63,19 +66,30 @@
 
     /* Contato Responsivo */
     .redes-sociais{
-        min-width:60%;
+        min-width:80%;
     }
     main section:nth-child(2){
         background-size: cover;
     }
 }
 @media only screen and (max-width: 540px){
-    /* produtos mobile */
-    .mosaico1 img, .mosaico2 img{
-        border: none;
+    /* sections mobile */
+    .produtos, .sobre, .portifolio-interno,.contatos{
+        max-width: var(--container-mobile);
     }
-      /* Contato Responsivo */
-    .redes-sociais{
-        min-width:40%;
+    /* Produtos mobile */
+    .mosaico1 img, .mosaico2 img{
+        /* border: none; */
+    }
+}
+@media only screen and (max-width: 500px){
+    .mosaico{
+        padding: 0 8px;
+    }
+    .mosaico1 img, .mosaico2 img{
+        max-width: 160px;
+    }
+    .mosaico1 img{
+        object-position: 90%;
     }
 }

@@ -586,10 +586,10 @@ main section:nth-child(2){
     padding: 16px 0;
 }
 .portifolio-interno{
-    min-width: var(--container-full);
-    padding: 16px 0;
+    max-width: var(--container-full);
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 32px;
 }
 .port{
     flex: 1;
@@ -665,7 +665,7 @@ main section:nth-child(2){
     padding: 16px 0;
 }
 .contato-interno{
-    min-width: var(--container-full);
+    max-width: var(--container-full);
     padding: 16px 0;
     display: flex;
     align-items: center;
@@ -679,7 +679,7 @@ main section:nth-child(2){
     min-width:100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .redes-sociais img{
     width: 64px;
