@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 :root{
     --vermelho-claro:#DD0B10;
     --vermelho-escuro:#B70002;
@@ -12,3 +13,14 @@
     --texto-p:1.25em;
     --texto-article:1.25em;
 }
+/*
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 800
+
+.jetbrains-mono-<uniquifier> {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+  */
