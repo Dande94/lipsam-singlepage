@@ -1,0 +1,14 @@
+:root{
+    --vermelho-claro:#DD0B10;
+    --vermelho-escuro:#B70002;
+    --branco:#F7F7F7;
+    --cinza:#959595;
+    --grafite:#222;
+    --container-full: 960px;
+    --container-tablet: 768px;
+    --container-mobile: 767px;
+    --title-h1:3em;
+    --title-h2:2.5em;
+    --texto-p:1.25em;
+    --texto-article:1.25em;
+}
