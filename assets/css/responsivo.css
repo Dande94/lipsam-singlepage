@@ -77,14 +77,11 @@
     .produtos, .sobre, .portifolio-interno,.contatos{
         max-width: var(--container-mobile);
     }
-    /* Produtos mobile */
-    .mosaico1 img, .mosaico2 img{
-        /* border: none; */
-    }
 }
 @media only screen and (max-width: 500px){
     .mosaico{
-        padding: 0 8px;
+        padding: 0 16px;
+        max-width: 430px;
     }
     .mosaico1 img, .mosaico2 img{
         max-width: 160px;
