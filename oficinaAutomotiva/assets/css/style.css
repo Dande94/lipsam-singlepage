@@ -2,12 +2,13 @@
 :root{
     --vermelho-claro:#DD0B10;
     --vermelho-escuro:#B70002;
-    --branco:#F7F7F7;
+    --branco-macio:#F7F7F7;
     --cinza:#959595;
     --grafite:#222;
     --container-full: 960px;
     --container-tablet: 768px;
     --container-mobile: 767px;
+    --container-mobile-restricted: 413px;
     --title-h1:3em;
     --title-h2:2.5em;
     --texto-p:1.25em;
@@ -24,3 +25,56 @@
   font-style: normal;
 }
   */
+
+  /* geral */
+.header{
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 4px 8px;
+  background-color: var(--vermelho-escuro);
+}
+.header-interno figure{
+  background-color: var(--branco-macio);
+  padding: 8px 24px;
+  margin: 8px auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 56px;
+}
+#btnMobile{
+  display: none;
+}
+.header .header-interno nav ul li a{
+  color: var(--branco-macio); 
+}
+/* geral */
+
+/* resposivo */
+/* Mobile first */
+@media only screen and (max-width: 500px){
+  .header-interno{
+    min-width: 100%;
+    display: flex;
+    justify-content:space-between;
+  }
+  .header-interno figure, .header-interno nav{
+    flex: 1;
+  }
+  #btnMobile{
+    display: block;
+  }
+  .header-interno nav ul{
+    display: none;
+  }
+  
+
+  
+};
+/* Mobile first */
+/* Tablet */
+/* @media only screen and (max-width: 959px) {
+}; */
+/* Tablet */
+
+/* resposivo */
