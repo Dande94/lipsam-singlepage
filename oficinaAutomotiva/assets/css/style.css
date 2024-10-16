@@ -129,7 +129,19 @@ main{
   background-size: cover;
   background-position: 60%;
 }
-.section-servicos::before, .section-produtos::before {
+.section-sobre{
+  position: relative;
+  background: url('../img/img_bg/manut_motor_3.png');
+  background-size: cover;
+  background-position: 40%;
+}
+.section-contato{
+  position: relative;
+  background: url('../img/img_bg/pneu_roda_esportiva_1.png');
+  background-size: cover;
+  background-position: 40%;
+}
+.section-servicos::before, .section-produtos::before, .section-sobre::before, .section-contato::before{
   content: '';
   position: absolute; 
   top: 0;
@@ -139,7 +151,7 @@ main{
   background-color: rgba(255, 255, 255, 0.6); 
   z-index: 1; 
 }
-.section-servicos article, .section-servicos button, .triangulo-arredondado, .section-produtos article, .section-produtos button {
+.section-servicos article, .section-servicos button, .triangulo-arredondado, .section-produtos article, .section-produtos button, .section-sobre article, .section-sobre button, .section-contato div{
   position: relative; /* Para garantir que o conteúdo fique acima da camada */
   z-index: 2; /* Aumenta o z-index para que o conteúdo seja visível */
 }
