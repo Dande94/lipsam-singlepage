@@ -57,6 +57,11 @@ html{
 }
 .header .header-interno nav ul li a, .btn-simples a{
   color: var(--branco-macio); 
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
 }
 .header-interno nav ul li:hover{
   background-color: var(--vermelho-claro);
@@ -92,6 +97,11 @@ article{
   font-size: 20px;
   line-height: 2em;
   color: #222;
+}
+.main-section .btn-area{
+  min-width: 100%;
+  display: flex;
+  align-items: center;
 }
 .btn-simples{
   margin: 24px auto;
