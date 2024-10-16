@@ -449,14 +449,29 @@ h1, h2, h3, h4, h5, h6, q, a, ul{
     text-align: justify;
     color: var(--cinza);
 }
+blockquote.desc p{
+    color: var(--branco);
+}
+blockquote::before{
+    content:'';
+    height: 2px;
+    width: 220px;
+    background-color: var(--branco);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 16px;
+}
 /* reutilizavel */
 
 
 /* iniício header */
 .header{
     min-width: 100%;
-    height: 100px;
-    background:url("../img/bg/bg-header.svg");
+    height: 148px;
+    background: url("../img/bg/bg-header.svg") no-repeat center center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -468,6 +483,13 @@ h1, h2, h3, h4, h5, h6, q, a, ul{
     font-size: var(--title-h1);
     color: var(--branco);
     letter-spacing: .5em;
+}
+.header-interna {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:16px;
 }
 
 /* fim header */
@@ -705,7 +727,7 @@ footer{
 /* fim footer */
 
 /* animações */
-.js .header-interna h1, .js .produtos ul, .js .produtos div, .js .portifolio div, .js .sobre ul, .js .sobre div{
+.js .header-interna h1, .js .slogan p, .js .produtos ul, .js .produtos div, .js .portifolio div, .js .sobre ul, .js .sobre div{
     opacity: 0;
 } 
 
