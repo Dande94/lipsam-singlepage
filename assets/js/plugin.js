@@ -26,6 +26,9 @@ Visibility.onVisible(function () {
         $(".header-interna h1").addClass("animate__animated animate__fadeInDown");
     }, 400);
     setTimeout(function(){
+        $(".slogan p").addClass("animate__animated animate__fadeInDown");
+    }, 400);
+    setTimeout(function(){
         $(".produtos ul").addClass("animate__animated animate__fadeInDown");
     }, 800);
     setTimeout(function(){
