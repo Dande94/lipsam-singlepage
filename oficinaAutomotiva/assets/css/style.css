@@ -8,7 +8,7 @@
     --container-full: 960px;
     --container-tablet: 768px;
     --container-mobile: 767px;
-    --container-mobile-restricted: 412px;
+    --container-mobile-restricted: 380px;
     --title-h1:3em;
     --title-h2:2.5em;
     --texto-p:1.25em;
@@ -30,6 +30,9 @@
 html{
   scroll-behavior: smooth; 
 }
+.hidden{
+  display: none;
+}
 .header{
   min-width: 100%;
   display: flex;
@@ -39,7 +42,7 @@ html{
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: fixed;
-  
+  z-index: 1000;  
 }
 .header-interno figure{
   background-color: var(--branco-macio);
@@ -59,13 +62,86 @@ html{
   background-color: var(--vermelho-claro);
   border-bottom: 2px solid var(--branco-macio);
 }
+h2{
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  margin-bottom: 24px;
+  letter-spacing: .3em;
+}
+article{
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  margin: 24px 0;
+  line-height: 2.4em;
+}
+.section-contato p {
+  padding: 0 48px;
+  margin: 24px 0;
+}
+.section-contato p a{
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 2em;
+  color: #222;
+}
 .btn-simples{
+  margin: 24px auto;
   width: 236px;
   height: 60px;
   border: 2px solid var(--branco-macio); 
   border-radius: 14px;
   letter-spacing: .3em;
   background: linear-gradient(to bottom, var(--vermelho-claro) , var(--vermelho-escuro) 60%)
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.main-section{
+  /* padding: 0 8px; */
+  border-bottom: 2px solid var(--cinza);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.triangulo-arredondado {
+  min-width: 100%; /* Largura mínima */
+  padding-top: 56.25%; /* Porcentagem baseada na proporção desejada (ex: 16:9) */
+  background: url('../img/decor/Polygon9.svg') no-repeat;
+  background-position: top right;
+  background-size: contain; /* Use 'contain' para que a imagem mantenha a proporção */
+  position: relative; /* Se você precisar de posicionamento absoluto de filhos */
+}
+.triangulo-arredondado h2 {
+  position: absolute; /* Permite o posicionamento relativo ao pai */
+  top: 15%; /* Centraliza verticalmente */
+  left: 77%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Move o h2 para o centro */
+  color: white; /* Ajuste a cor do texto conforme necessário */
+  text-align: center; /* Centraliza o texto */
+  margin: 0; /* Remove margens padrão */
+  font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+.section-contato p span{
+  display: inline-block; /* Garante que o span possa ser rotacionado */
+  width: 24px; /* Defina a largura desejada */
+  height: 24px; /* Defina a altura desejada */
+  background: url('../img/decor/Polygon9.svg') no-repeat center;
+  background-size: contain; 
+  transform-origin: center; 
+  transform: rotate(90deg); /* Aplica a rotação desejada */
+  transition: transform 0.5s; /* Adiciona uma transição suave se desejar */
+  margin: 0 8px ;
 }
 
 /* geral */
@@ -77,6 +153,7 @@ html{
     min-width: 100%;
     display: flex;
     justify-content:space-between;
+    position: relative;
   }
   .header-interno figure, .header-interno nav{
     flex: 1;
@@ -98,7 +175,7 @@ html{
     top: 136px;
     right: 0px;
     height: 0;
-    z-index: 99;
+    z-index: 1000;
     transition: .6s;
     visibility: hidden;
     overflow-y: hidden;
@@ -128,6 +205,7 @@ html{
     border-top: 3px solid var(--branco-macio);
     width: 40px;
     border-radius: 2px;
+    transition: 1s;
   }
   #hamburguer::after, #hamburguer::before{
     content: '';
@@ -141,7 +219,7 @@ html{
     border-radius: 2px;
   }
   #headerNav.active #hamburguer{
-    transition: .6s;
+    transition: 1s;
     border-top-color: transparent;
   }
   #headerNav.active #hamburguer::before{
@@ -151,16 +229,49 @@ html{
     transform: rotate(-135deg);
     top: -12px
   }
-  /* menu mobile */
+
+  /* main */
   main{
     padding-top: 148px;
     min-width: 100%;
   }
-  main section{
-    max-width:var(--container-mobile-restricted); 
-    padding: 0 8px;
+.main-section{
+  max-width:var(--container-mobile-restricted); 
+}
+.main-section article{
+  text-align: center;
+
+}
+article{
+  padding: 0 32px;
+}
+.triangulo-arredondado h2 {
+  top: 16%; /* Centraliza verticalmente */
+  left: 76%; /* Centraliza horizontalmente */
+}
+
+/* section serviços */
+
+/* section serviços */
+
+/* section sobre nós */
+.section-sobre .triangulo-arredondado h2{
+  top: 25%; /* Centraliza verticalmente */
+  left: 78%; /* Centraliza horizontalmente */
+  line-height: 3rem;
+}
+  /* section sobre nós */
+
+  /* section contatos */
+  .section-contato{
+    min-width:var(--container-mobile-restricted); 
   }
 
+  /* section contatos */
+
+  /* main */
+
+  /* menu mobile */
   
 };
 /* Mobile first */
