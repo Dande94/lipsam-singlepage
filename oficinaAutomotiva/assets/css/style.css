@@ -4,7 +4,7 @@
     --vermelho-escuro:#B70002;
     --branco-macio:#F7F7F7;
     --cinza:#959595;
-    --grafite:#222;
+    --grafite:#111;
     --container-full: 960px;
     --container-tablet: 768px;
     --container-mobile: 767px;
@@ -113,6 +113,35 @@ main{
   border-bottom: 2px solid var(--cinza);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.main-section article{
+  color: var(--grafite);
+}
+.section-servicos{
+  position: relative;
+  background: url('../img/img_bg/manut_motor_2.png');
+  background-size: cover;
+  background-position: 50%;
+}
+.section-produtos{
+  position: relative;
+  background: url('../img/img_bg/linha_produtos_estetica_1.png');
+  background-size: cover;
+  background-position: 60%;
+}
+.section-servicos::before, .section-produtos::before {
+  content: '';
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6); 
+  z-index: 1; 
+}
+.section-servicos article, .section-servicos button, .triangulo-arredondado, .section-produtos article, .section-produtos button {
+  position: relative; /* Para garantir que o conteúdo fique acima da camada */
+  z-index: 2; /* Aumenta o z-index para que o conteúdo seja visível */
 }
 .triangulo-arredondado {
   min-width: 100%; /* Largura mínima */
