@@ -265,14 +265,31 @@ footer{
   margin: 32px 0;
 }
 .main-section ul li{
-  line-height: 2em;
   color: var(--grafite);
   font-size: 1em;
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  list-style: circle;
+}
+.main-section ul li::before{
+  content: '';
+  display: inline-block; /* Garante que o span possa ser rotacionado */
+  width: 1em; /* Defina a largura desejada */
+  height: 1em; /* Defina a altura desejada */
+  background: url('../img/decor/Polygon9.svg') no-repeat center;
+  background-size: contain; 
+  transform-origin: center; 
+  transform: rotate(90deg); /* Aplica a rotação desejada */
+  transition: transform 0.5s; /* Adiciona uma transição suave se desejar */
+  margin: 0 8px ;
+}
+.main-section ul li::after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--grafite-macio);
 }
 
 
