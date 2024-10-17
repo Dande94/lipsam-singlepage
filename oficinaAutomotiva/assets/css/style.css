@@ -5,6 +5,7 @@
     --branco-macio:#F7F7F7;
     --cinza:#959595;
     --grafite:#111;
+    --grafite-macio:#222;
     --container-full: 960px;
     --container-tablet: 768px;
     --container-mobile: 767px;
@@ -29,6 +30,7 @@
   /* geral */
 html{
   scroll-behavior: smooth; 
+  background-color: var(--branco-macio);
 }
 .hidden{
   display: none;
@@ -106,10 +108,21 @@ article{
   margin: 24px auto;
   width: 236px;
   height: 60px;
-  border: 2px solid var(--branco-macio); 
+  border: 2px solid var(--grafite-macio); 
   border-radius: 14px;
   letter-spacing: .3em;
-  background: linear-gradient(to bottom, var(--vermelho-claro) , var(--vermelho-escuro) 60%)
+  background: linear-gradient(to bottom, var(--vermelho-claro) , var(--vermelho-escuro) 60%);
+  transition: .4s ease;
+}
+.btn-simples a{
+  width: 100% !important;
+  height: 100% !important;
+}
+.btn-simples:hover{
+  background:var(--branco-macio);
+}
+.btn-simples:hover a{
+  color: var(--vermelho-escuro);
 }
 main{
   display: flex;
@@ -147,8 +160,9 @@ main{
 .section-contato{
   position: relative;
   background: url('../img/img_bg/pneu_roda_esportiva_1.png');
-  background-size: cover;
+  background-size: 200%;
   background-position: 40%;
+  background-position: 60%;
 }
 .section-servicos::before, .section-produtos::before, .section-sobre::before, .section-contato::before{
   content: '';
@@ -159,6 +173,7 @@ main{
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.6); 
   z-index: 1; 
+  border-radius: 20px;
 }
 .section-servicos article, .section-servicos button, .triangulo-arredondado, .section-produtos article, .section-produtos button, .section-sobre article, .section-sobre button, .section-contato div{
   position: relative; /* Para garantir que o conteúdo fique acima da camada */
@@ -192,6 +207,18 @@ main{
   transform: rotate(90deg); /* Aplica a rotação desejada */
   transition: transform 0.5s; /* Adiciona uma transição suave se desejar */
   margin: 0 8px ;
+}
+
+footer{
+  min-width:100%;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 2em;
+  color: #222;
 }
 
 /* geral */
@@ -318,6 +345,12 @@ article{
   }
 
   /* section contatos */
+
+  /* footer */
+  footer{
+    font-size: 1em;
+  }
+  /* footer */
 
   /* main */
 
