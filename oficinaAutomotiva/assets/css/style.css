@@ -73,9 +73,12 @@ h2{
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 32px;
   margin-bottom: 24px;
+  font-size: 20px;
   letter-spacing: .3em;
+  color: white; /* Ajuste a cor do texto conforme necessário */
+  text-align: center; /* Centraliza o texto */
+  margin: 0; /* Remove margens padrão */
 }
 article{
   font-family: "JetBrains Mono", monospace;
@@ -129,6 +132,9 @@ main{
   flex-direction: column;
   align-items: center;
   gap: 48px;
+  padding-top: 176px;
+  min-width: 100%;
+  
 }
 .main-section{
   /* padding: 0 8px; */
@@ -139,6 +145,8 @@ main{
 .main-section article{
   color: var(--grafite);
 }
+
+/* página home */
 .section-servicos{
   position: relative;
   background: url('../img/img_bg/manut_motor_2.png');
@@ -164,7 +172,7 @@ main{
   background-position: 40%;
   background-position: 60%;
 }
-.section-servicos::before, .section-produtos::before, .section-sobre::before, .section-contato::before{
+.section-servicos::before, .section-produtos::before, .section-sobre::before, .section-contato::before, .section-oficina::before, .section-estetica::before{
   content: '';
   position: absolute; 
   top: 0;
@@ -175,10 +183,11 @@ main{
   z-index: 1; 
   border-radius: 20px;
 }
-.section-servicos article, .section-servicos button, .triangulo-arredondado, .section-produtos article, .section-produtos button, .section-sobre article, .section-sobre button, .section-contato div{
+.section-servicos article, .section-servicos button, .triangulo-arredondado, .section-produtos article, .section-produtos button, .section-sobre article, .section-sobre button, .section-contato div, .section-oficina ul, .section-estetica ul{
   position: relative; /* Para garantir que o conteúdo fique acima da camada */
   z-index: 2; /* Aumenta o z-index para que o conteúdo seja visível */
 }
+/* página home */
 .triangulo-arredondado {
   min-width: 100%; /* Largura mínima */
   padding-top: 56.25%; /* Porcentagem baseada na proporção desejada (ex: 16:9) */
@@ -192,10 +201,6 @@ main{
   top: 15%; /* Centraliza verticalmente */
   left: 77%; /* Centraliza horizontalmente */
   transform: translate(-50%, -50%); /* Move o h2 para o centro */
-  color: white; /* Ajuste a cor do texto conforme necessário */
-  text-align: center; /* Centraliza o texto */
-  margin: 0; /* Remove margens padrão */
-  font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
 }
 .section-contato p span{
   display: inline-block; /* Garante que o span possa ser rotacionado */
@@ -220,6 +225,58 @@ footer{
   line-height: 2em;
   color: #222;
 }
+/* Demais Serviços e Produtos */
+.title-area{
+  min-width: 100%;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.2em;
+  display: flex;
+  justify-content: center;
+}
+.title-area h1{
+  min-width: 100%;
+  padding: 0 30px;
+  background: url('../img/decor/Polygon9.svg') no-repeat;
+  background-position: right;
+  background-size: contain; /* Use 'contain' para que a imagem mantenha a proporção */
+  position: relative; /* Se você precisar de posicionamento absoluto de filhos */
+}
+
+.section-oficina{
+  position: relative;
+  background: url('../img/img_bg/manut_motor_1.png');
+  background-size: cover;
+  background-position: 50%;
+}
+.section-estetica{
+  position: relative;
+  background: url('../img/img_bg/pintando_carro_bg_4.png');
+  background-size: cover;
+  background-position: 60%;
+}
+.main-section .listagem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0;
+}
+.main-section ul li{
+  line-height: 2em;
+  color: var(--grafite);
+  font-size: 1em;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  list-style: circle;
+}
+
+
+/* Demais Serviços e Produtos */
 
 /* geral */
 
@@ -308,12 +365,9 @@ footer{
   }
 
   /* main */
-  main{
-    padding-top: 148px;
-    min-width: 100%;
-  }
 .main-section{
   max-width:var(--container-mobile-restricted); 
+  min-width:var(--container-mobile-restricted); 
 }
 .main-section article{
   text-align: center;
@@ -325,6 +379,7 @@ article{
 .triangulo-arredondado h2 {
   top: 16%; /* Centraliza verticalmente */
   left: 76%; /* Centraliza horizontalmente */
+
 }
 
 /* section serviços */
@@ -351,6 +406,14 @@ article{
     font-size: 1em;
   }
   /* footer */
+
+/* Páginas Servicos e Produtos */
+.main-section ul li{
+  line-height: 2em;
+  color: var(--grafite);
+
+}
+/* Páginas Servicos e Produtos */
 
   /* main */
 
