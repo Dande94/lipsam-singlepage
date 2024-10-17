@@ -4,6 +4,7 @@
     --vermelho-escuro:#B70002;
     --branco-macio:#F7F7F7;
     --cinza:#959595;
+    --black:#090909;
     --grafite:#111;
     --grafite-macio:#222;
     --container-full: 960px;
@@ -118,8 +119,8 @@ article{
   transition: .4s ease;
 }
 .btn-simples a{
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
 }
 .btn-simples:hover{
   background:var(--branco-macio);
@@ -137,13 +138,13 @@ main{
   
 }
 .main-section{
-  /* padding: 0 8px; */
   border-bottom: 2px solid var(--cinza);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.main-section article{
-  color: var(--grafite);
+.main-section article, .main-section ul li{
+  color: var(--black);
+  font-weight: 500;
 }
 
 /* página home */
@@ -179,7 +180,7 @@ main{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.6); 
+  background-color: rgba(255, 255, 255, 0.7); 
   z-index: 1; 
   border-radius: 20px;
 }
@@ -225,6 +226,7 @@ footer{
   line-height: 2em;
   color: #222;
 }
+
 /* Demais Serviços e Produtos */
 .title-area{
   min-width: 100%;
@@ -265,11 +267,9 @@ footer{
   margin: 32px 0;
 }
 .main-section ul li{
-  color: var(--grafite);
   font-size: 1em;
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
-  font-weight: 300;
   font-style: normal;
 }
 .main-section ul li::before{
@@ -292,6 +292,18 @@ footer{
   background-color: var(--grafite-macio);
 }
 
+/* footer */
+footer{
+  font-size: 1em;
+}
+footer a{
+  color: var(--grafite-macio);
+  text-decoration: underline;
+}
+footer a:visited{
+  color: var(--grafite-macio);
+}
+/* footer */
 
 /* Demais Serviços e Produtos */
 
@@ -419,16 +431,12 @@ article{
   /* section contatos */
 
   /* footer */
-  footer{
-    font-size: 1em;
-  }
+
   /* footer */
 
 /* Páginas Servicos e Produtos */
 .main-section ul li{
   line-height: 2em;
-  color: var(--grafite);
-
 }
 /* Páginas Servicos e Produtos */
 
