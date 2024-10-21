@@ -8,7 +8,7 @@
     --grafite:#111;
     --grafite-macio:#222;
     --container-full: 960px;
-    --container-tablet: 768px;
+    --container-tablet: 704px;
     --container-mobile: 767px;
     --container-mobile-restricted: 380px;
     --title-h1:3em;
@@ -47,11 +47,26 @@ html{
   position: fixed;
   z-index: 1000;  
 }
-.header-interno figure{
-  padding: 8px 24px;
-  margin: 8px auto;
+.header-interno{
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
+  position: relative;
+  max-width: var(--container-full);
+  width: 100%;
+  align-items: center;
+}
+.header-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.header-interno figure, .header-interno nav{
+  flex: 1;
+}
+.header-interno figure{
+  padding: 8px;
+  margin: 4px auto;
+  display: flex;
+  justify-content: flex-start;
   border-radius: 56px;
 }
 #btnMobile{
@@ -65,10 +80,20 @@ html{
   font-style: normal;
   font-size: 16px;
 }
-.header-interno nav ul li:hover{
-  background-color: var(--vermelho-claro);
-  border-bottom: 2px solid var(--branco-macio);
+.header-menu li{
+  margin-left: 16px;
+  padding: 8px 20px;
+  white-space: nowrap;
+  border-radius: 12px;
+  transition: .6s ease;
 }
+.header-menu li:hover{
+  background-color: var(--branco-macio);
+}
+.header .header-menu li:hover a{
+  color: var(--vermelho-escuro);
+}
+
 h2{
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
@@ -124,6 +149,7 @@ article{
 }
 .btn-simples:hover{
   background:var(--branco-macio);
+
 }
 .btn-simples:hover a{
   color: var(--vermelho-escuro);
@@ -135,7 +161,7 @@ main{
   gap: 48px;
   padding-top: 176px;
   min-width: 100%;
-  
+  margin-bottom: 32px;
 }
 .main-section{
   border-bottom: 2px solid var(--cinza);
@@ -173,7 +199,7 @@ main{
   background-position: 40%;
   background-position: 60%;
 }
-.section-servicos::before, .section-produtos::before, .section-sobre::before, .section-contato::before, .section-oficina::before, .section-estetica::before{
+.section-servicos::before, .section-produtos::before, .section-sobre::before, .section-contato::before, .section-oficina::before, .section-estetica::before, .section-pecas::before, .section-esteticos::before{
   content: '';
   position: absolute; 
   top: 0;
@@ -184,24 +210,24 @@ main{
   z-index: 1; 
   border-radius: 20px;
 }
-.section-servicos article, .section-servicos button, .triangulo-arredondado, .section-produtos article, .section-produtos button, .section-sobre article, .section-sobre button, .section-contato div, .section-oficina ul, .section-estetica ul{
-  position: relative; /* Para garantir que o conteúdo fique acima da camada */
-  z-index: 2; /* Aumenta o z-index para que o conteúdo seja visível */
+.section-servicos article, .section-servicos button, .triangulo-arredondado, .section-produtos article, .section-produtos button, .section-sobre article, .section-sobre button, .section-contato div, .section-oficina ul, .section-estetica ul, .section-pecas ul, .section-esteticos ul{
+  position: relative; 
+  z-index: 2; 
 }
 /* página home */
 .triangulo-arredondado {
-  min-width: 100%; /* Largura mínima */
-  padding-top: 56.25%; /* Porcentagem baseada na proporção desejada (ex: 16:9) */
+  min-width: 100%;
+  padding-top: 56.25%;
   background: url('../img/decor/Polygon9.svg') no-repeat;
   background-position: top right;
-  background-size: contain; /* Use 'contain' para que a imagem mantenha a proporção */
-  position: relative; /* Se você precisar de posicionamento absoluto de filhos */
+  background-size: contain;
+  position: relative;
 }
 .triangulo-arredondado h2 {
-  position: absolute; /* Permite o posicionamento relativo ao pai */
-  top: 15%; /* Centraliza verticalmente */
-  left: 77%; /* Centraliza horizontalmente */
-  transform: translate(-50%, -50%); /* Move o h2 para o centro */
+  position: absolute;
+  top: 15%; 
+  left: 77%;
+  transform: translate(-50%, -50%);
 }
 .section-contato p span{
   display: inline-block; /* Garante que o span possa ser rotacionado */
@@ -260,6 +286,18 @@ footer{
   background-size: cover;
   background-position: 60%;
 }
+.section-pecas{
+  position: relative;
+  background: url('../img/img_bg/prod_pecas_bg_1.png');
+  background-size: cover;
+  background-position: 50%;
+}
+.section-esteticos{
+  position: relative;
+  background: url('../img/img_bg/linha_produtos_estetica_2.png');
+  background-size: cover;
+  background-position: 60%;
+}
 .main-section .listagem{
   display: flex;
   flex-direction: column;
@@ -291,6 +329,11 @@ footer{
   height: 2px;
   background-color: var(--grafite-macio);
 }
+/* contatos */
+.redes-sociais p a{
+  font-size: 2em;
+}
+/* contatos */
 
 /* footer */
 footer{
@@ -310,14 +353,14 @@ footer a:visited{
 /* geral */
 
 /* resposivo */
-/* Mobile first */
-@media only screen and (max-width: 500px){
-  .header-interno{
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  /* .header-interno{
     min-width: 100%;
     display: flex;
     justify-content:space-between;
     position: relative;
-  }
+  } */
   .header-interno figure, .header-interno nav{
     flex: 1;
   }
@@ -329,10 +372,13 @@ footer a:visited{
     justify-content: end;
     align-items: center;
   }
+  .header-interno nav ul li:hover{
+    background-color: var(--vermelho-claro);
+    border-bottom: 2px solid var(--branco-macio);
+  }
   /* menu mobile */
   .header-interno nav ul{
     display: block;
-    background-color: var(--vermelho-escuro);
     position: absolute;
     width: 100%;
     top: 136px;
@@ -392,64 +438,103 @@ footer a:visited{
     transform: rotate(-135deg);
     top: -12px
   }
-
-  /* main */
-.main-section{
-  max-width:var(--container-mobile-restricted); 
-  min-width:var(--container-mobile-restricted); 
+  .main-section{
+    max-width:var(--container-tablet); 
+    min-width:90%; 
+  }
+  .main-section article{
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    margin-bottom: 32px;
+    font-size: 1.6em;
+  }
+  .triangulo-arredondado {
+    min-width: 100%;
+    padding-top: 56.25%;
+    background: url('../img/decor/Polygon9.svg') no-repeat;
+    background-position: top right;
+  }
+  .triangulo-arredondado h2 {
+    left: 85%;
+  }
+  .section-sobre .triangulo-arredondado h2 {
+    white-space: nowrap;
+  }
+  .main-section ul li{
+    font-size: 1.7em;
+    margin-bottom: 32px;
+  }
+  footer{
+    font-size: 1.4em;
+  }
 }
-.main-section article{
-  text-align: center;
+/* Tablet */
+/* Mobile first */
+@media only screen and (max-width: 500px){
+    /* main */
+  .main-section{
+    max-width:var(--container-mobile-restricted); 
+    min-width:90%; 
+  }
+  .main-section article{
+    font-size: 1em;
 
-}
-article{
-  padding: 0 32px;
-}
-.triangulo-arredondado h2 {
-  top: 16%; /* Centraliza verticalmente */
-  left: 76%; /* Centraliza horizontalmente */
+  }
+  .triangulo-arredondado{
+    background-size: contain; 
+  }
+  .main-section article{
+    padding: 0 auto;
+  }
+  .triangulo-arredondado h2 {
+    top: 16%; /* Centraliza verticalmente */
+    left: 76%; /* Centraliza horizontalmente */
 
-}
-
-/* section serviços */
-
-/* section serviços */
-
-/* section sobre nós */
-.section-sobre .triangulo-arredondado h2{
-  top: 25%; /* Centraliza verticalmente */
-  left: 78%; /* Centraliza horizontalmente */
-  line-height: 3rem;
-}
-  /* section sobre nós */
-
-  /* section contatos */
-  .section-contato{
-    min-width:var(--container-mobile-restricted); 
   }
 
-  /* section contatos */
+  /* section serviços */
 
-  /* footer */
+  /* section serviços */
 
-  /* footer */
+  /* section sobre nós */
+  .section-sobre .triangulo-arredondado h2{
+    top: 25%; /* Centraliza verticalmente */
+    left: 78%; /* Centraliza horizontalmente */
+    line-height: 3rem;
+  }
+    /* section sobre nós */
 
-/* Páginas Servicos e Produtos */
-.main-section ul li{
-  line-height: 2em;
-}
-/* Páginas Servicos e Produtos */
+    /* section contatos */
+    .section-contato{
+      min-width:var(--container-mobile-restricted); 
+    }
+    .redes-sociais p a{
+      font-size: 1.2em;
+    }
 
-  /* main */
+    /* section contatos */
 
-  /* menu mobile */
-  
+    /* footer */
+    footer{
+      font-size: 1em;
+    }
+    /* footer */
+
+  /* Páginas Servicos e Produtos */
+  .main-section ul li{
+    line-height: 2em;
+  }
+  /* Páginas Servicos e Produtos */
+  .main-section ul li{
+    font-size: .9em;
+    margin-bottom: 6px;
+    padding: 0 12px
+    
+  }
+  /* Páginas Servicos e Produtos */
+    /* main */
 };
 /* Mobile first */
-/* Tablet */
-/* @media only screen and (max-width: 959px) {
-}; */
-/* Tablet */
-
 /* resposivo */
 
