@@ -138,6 +138,7 @@ article{
   align-items: center;
 }
 .btn-simples{
+  cursor: pointer;
   margin: 24px auto;
   width: 236px;
   height: 60px;
@@ -252,7 +253,10 @@ main{
   transform-origin: center; 
   transform: rotate(90deg); /* Aplica a rotação desejada */
   transition: transform 0.5s; /* Adiciona uma transição suave se desejar */
-  margin: 0 8px ;
+  margin: 0 8px;
+}
+.section-contato p a{
+  text-decoration: underline;
 }
 
 footer{
