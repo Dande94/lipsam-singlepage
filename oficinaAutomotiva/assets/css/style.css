@@ -90,8 +90,9 @@ html{
 .header-menu li:hover{
   background-color: var(--branco-macio);
 }
-.header .header-menu li:hover a{
-  color: var(--vermelho-escuro);
+.main-section{
+  max-width: var(--container-full);
+  min-width:var(--container-full); 
 }
 
 h2{
@@ -220,14 +221,24 @@ main{
   padding-top: 56.25%;
   background: url('../img/decor/Polygon9.svg') no-repeat;
   background-position: top right;
-  background-size: contain;
+  background-size: 300px;
   position: relative;
 }
 .triangulo-arredondado h2 {
   position: absolute;
-  top: 15%; 
-  left: 77%;
+  top: 10%; 
+  left: 88%;
   transform: translate(-50%, -50%);
+}
+.main-section article{
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 32px;
+  font-size: 1.6em;
+}
+.section-sobre .triangulo-arredondado h2 {
+  white-space: nowrap;
 }
 .section-contato p span{
   display: inline-block; /* Garante que o span possa ser rotacionado */
@@ -305,7 +316,7 @@ footer{
   margin: 32px 0;
 }
 .main-section ul li{
-  font-size: 1em;
+  font-size: 1.8em;
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
   font-style: normal;
@@ -376,6 +387,9 @@ footer a:visited{
     background-color: var(--vermelho-claro);
     border-bottom: 2px solid var(--branco-macio);
   }
+  .header-interno nav ul li:hover a{
+    color: var(--branco-macio);
+  }
   /* menu mobile */
   .header-interno nav ul{
     display: block;
@@ -389,6 +403,7 @@ footer a:visited{
     visibility: hidden;
     overflow-y: hidden;
     border-radius: 20px;
+    background-color: var(--vermelho-escuro);
   }
   .header-interno nav ul li{
     padding: 1rem 0;
@@ -442,13 +457,6 @@ footer a:visited{
     max-width:var(--container-tablet); 
     min-width:90%; 
   }
-  .main-section article{
-    margin: 0 auto;
-    text-align: center;
-    width: 90%;
-    margin-bottom: 32px;
-    font-size: 1.6em;
-  }
   .triangulo-arredondado {
     min-width: 100%;
     padding-top: 56.25%;
@@ -457,9 +465,6 @@ footer a:visited{
   }
   .triangulo-arredondado h2 {
     left: 85%;
-  }
-  .section-sobre .triangulo-arredondado h2 {
-    white-space: nowrap;
   }
   .main-section ul li{
     font-size: 1.7em;
@@ -534,7 +539,37 @@ footer a:visited{
   }
   /* Páginas Servicos e Produtos */
     /* main */
-};
+}
 /* Mobile first */
 /* resposivo */
 
+/* efeito pulse buttom */ 
+.pulse-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+  display: inline-block;
+  border-radius: 50%;
+  background: none;
+  padding: -10px;
+  animation: pulse 2s infinite;
+  z-index: 999;
+}
+
+.pulse-button img {
+  width: 50px; 
+  height: 50px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(41, 126, 166, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(41, 126, 166, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(41, 126, 166, 0);
+  }
+}
+/* efeito pulse buttom */
