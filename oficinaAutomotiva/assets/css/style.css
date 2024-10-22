@@ -72,7 +72,7 @@ html{
 #btnMobile{
   display: none;
 }
-.header .header-interno nav ul li a, .btn-simples a{
+.header .header-menu li a, .btn-simples a{
   color: var(--branco-macio); 
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
@@ -89,6 +89,9 @@ html{
 }
 .header-menu li:hover{
   background-color: var(--branco-macio);
+}
+.header-menu li:hover a{
+  color:var(--vermelho-escuro);
 }
 .main-section{
   max-width: var(--container-full);
