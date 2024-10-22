@@ -63,7 +63,7 @@ html{
   flex: 1;
 }
 .header-interno figure{
-  padding: 8px;
+  padding: 8px 0;
   margin: 4px auto;
   display: flex;
   justify-content: flex-start;
