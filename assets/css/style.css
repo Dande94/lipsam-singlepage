@@ -643,6 +643,9 @@ main section:nth-child(2){
     align-items: center;
 }
 .screen img{
+    width: 65%;
+}
+.port:nth-child(1) .screen img{
     width: 90%;
 }
 .port .btn-port{
