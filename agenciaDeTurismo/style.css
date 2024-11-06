@@ -303,7 +303,7 @@ footer.footer{
         flex-direction: column-reverse;
     }
 }
-@media only screen and (max-width: 413px){
+@media only screen and (max-width: 500px){
     header{
         margin-bottom: 24px;
     }
