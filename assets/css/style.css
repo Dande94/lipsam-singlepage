@@ -747,7 +747,7 @@ footer{
 /* fim footer */
 
 /* animações */
-.js .header-interna h1, .js .slogan p, .js .produtos ul, .js .produtos div, .js .portifolio div, .js .sobre ul, .js .sobre div{
+.js .header-interna h1, .js blockquote , .js .slogan p, .js .produtos ul, .js .produtos div, .js .portifolio h2, .js .portifolio div, .js .sobre ul, .js .sobre div{
     opacity: 0;
 } 
 

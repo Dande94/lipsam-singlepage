@@ -27,13 +27,19 @@ Visibility.onVisible(function () {
     }, 400);
     setTimeout(function(){
         $(".slogan p").addClass("animate__animated animate__fadeInDown");
-    }, 400);
+    }, 450);
+    setTimeout(function(){
+        $("blockquote").addClass("animate__animated animate__fadeInDown");
+    }, 500);
     setTimeout(function(){
         $(".produtos ul").addClass("animate__animated animate__fadeInDown");
     }, 800);
     setTimeout(function(){
         $(".produtos div").addClass("animate__animated animate__fadeInDown");
     }, 800);
+    setTimeout(function(){
+        $(".portifolio h2").addClass("animate__animated animate__fadeInDown");
+    }, 1150);
     setTimeout(function(){
         $(".portifolio div").addClass("animate__animated animate__fadeInDown");
     }, 1200);
@@ -42,5 +48,5 @@ Visibility.onVisible(function () {
     }, 1800);
     setTimeout(function(){
         $(".sobre ul").addClass("animate__animated animate__fadeInDown");
-    }, 1800);
+    }, 1850);
 });
