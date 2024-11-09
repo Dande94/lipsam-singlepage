@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="Author" content="Anderson Nunes">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/script.js"></script>
+    <script defer src="assets/js/itens.js"></script>
+    <link rel="shortcut icon" href="assets/img/icon_burguer.jpg" type="image/x-icon">
+    <title>TôComFome</title>
+</head>
+<header>
+    <div>
+        <h1>TôComFome</h1>
+        <h2>Monte seu combo rapidinho!</h2>
+    </div>
+</header>
+<body>
+    <main>
+        <section class="produtos combo">
+            <h3>Primeiro: Seu lanche</h3>
+        </section>
+        <section class="produtos bebidas">
+            <h3>Segundo: Sua bebida</h3>
+        </section>
+        <section class="produtos sobremesa">
+            <h3>Terceiro: Sua Sobremesa</h3>
+        </section>
+        <div class="metodo-pagamento">
+            <label for="metodoPagamento">Método de Pagamento:</label>
+            <select id="metodoPagamento">
+                <option value="cartao">Cartão</option>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="pix">Pix</option>
+            </select>
+            <!-- Div que mostra o valor total -->
+            <div id="total-compra">
+                Total: R$0,00
+            </div>
+        </div>
+        <section id="opcao-pedido">
+            <div>
+                <label>
+                    <input type="radio" name="tipoPedido" id="retirada" value="retirada">
+                    Retirada
+                </label>
+                <label>
+                    <input type="radio" name="tipoPedido" id="delivery" value="delivery">
+                    Delivery
+                </label>
+            </div>
+            <!-- Formulário de Delivery (inicialmente oculto) -->
+            <div id="form-delivery" style="display: none;">
+                <h3>Detalhes de Delivery</h3>
+                <form id="form-delivery-details">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+        
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+        
+                    <label for="bairro">Bairro:</label>
+                    <select id="bairro" name="bairro" required>
+                        <option value="Centro">Centro</option>
+                        <option value="Santo Amaro">Santo Amaro</option>
+                        <option value="Aventureiro">Aventureiro</option>
+                        <option value="Itaum">Itaum</option>
+                    </select>
+        
+                    <label for="numero">Número da Casa:</label>
+                    <input type="text" id="numero" name="numero" required>
+        
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes" name="observacoes"></textarea>
+                </form>
+            </div>
+        </section>
+        <section class="produtos btn-finalizar">
+            <button id="btn-finalizar">Finalizar Pedido</button>
+        </section>
+    </main>
+    <a href="https://lipsam.com.br/" class="pulse-button">
+        <img src="assets/img/LogoVetorizadaFinal.svg" alt="Pulse Button Icon">
+    </a>
+</body>
+</html>
